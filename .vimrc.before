@@ -1,0 +1,4 @@
+:set mouse=a
+:set splitright
+:set splitbelow
+map <C-i> :tabnew 

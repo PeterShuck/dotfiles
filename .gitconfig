@@ -1,0 +1,15 @@
+[user]
+  email = peter.shuck@comcast.net 
+  name = Peter Shuck
+[core]
+	editor = vim
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	last = log -1 HEAD
+	review = log -p
+  hist = log --graph --color --pretty='%C(auto)%h %s (%an, %ar)%d' --abbrev-commit
+[rerere]
+	enabled = true

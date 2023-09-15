@@ -1,0 +1,32 @@
+require 'irb/completion'
+
+IRB.conf.merge!({
+  AUTO_INDENT: true,
+  BACK_TRACE_LIMIT: 500,
+  SAVE_HISTORY: 1000
+})
+
+class Object
+  def unique_methods
+    self.methods.sort - Object.methods -
+      Array.methods - Array.instance_methods -
+      Hash.methods - Hash.instance_methods
+  end
+end
+
+def d2h *args
+  puts *args.map{|n| '%x' % n }
+end
+
+def h2d *args
+  puts *args.map{|n| Integer("0x#{n}") }
+end
+
+def time
+  start_time = Time.now
+  result = yield if block_given?
+  end_time = Time.now
+  puts (Time.now - start_time).seconds.inspect
+  result
+end
+
