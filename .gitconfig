@@ -1,6 +1,6 @@
 [user]
-  email = peter.shuck@comcast.net 
-  name = Peter Shuck
+	email = peter.shuck@comcast.net
+	name = SonOfBattles1
 [core]
 	editor = vim
 [alias]
@@ -13,3 +13,5 @@
   hist = log --graph --color --pretty='%C(auto)%h %s (%an, %ar)%d' --abbrev-commit
 [rerere]
 	enabled = true
+[credential]
+	helper = cache
