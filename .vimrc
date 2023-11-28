@@ -35,7 +35,11 @@ call plug#end()
 
 set autoread
 set backspace=2 " Backspace deletes like most programs in insert mode
-set clipboard^=unnamedplus " copy paste to system clipboard
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed " OSX
+else
+  set clipboard^=unnamedplus " Linux
+endif
 set colorcolumn=+1 " highlight column after 'textwidth'
 set background=dark " Use colors that look good on a dark background
 colorscheme sourcerer

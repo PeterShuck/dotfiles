@@ -6,10 +6,14 @@
 [alias]
 	co = checkout
 	ci = commit
+  ca = commit --amend
+  cp = cherry-pick
 	st = status
 	br = branch
 	last = log -1 HEAD
 	review = log -p
+  ds = diff --staged
+  amend = commit --amend
   hist = log --graph --color --pretty='%C(auto)%h %s (%an, %ar)%d' --abbrev-commit
 [rerere]
 	enabled = true
